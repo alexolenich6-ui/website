@@ -3,8 +3,14 @@ import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
 import ParallaxImage from "@/components/ParallaxImage";
 import WhyMe from "@/components/WhyMe";
+import Portfolio from "@/components/Portfolio";
+import Process from "@/components/Process";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export default function Home() {
   return (
@@ -20,11 +26,21 @@ export default function Home() {
           meta="Moscow · 2024"
         />
         <WhyMe />
-        <section className="min-h-[40vh] flex items-center justify-center px-6">
-          <p className="eyebrow">Следующие секции — в&nbsp;разработке</p>
-        </section>
+        <Portfolio />
+        <ParallaxImage
+          src="/portfolio/harmony_3.jpg"
+          alt="Фитнесс Harmony — коммерческий интерьер"
+          caption="Harmony · Коммерческий · 350 м²"
+          meta="Moscow · 2023"
+          height="compact"
+        />
+        <Process />
+        <Services />
+        <About />
+        <Contact />
       </main>
       <Footer />
+      <StickyMobileCTA />
     </SmoothScroll>
   );
 }
