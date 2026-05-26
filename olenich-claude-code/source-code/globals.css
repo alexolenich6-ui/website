@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-espresso: #5B4A3E;
+  --color-shadow: #8A8077;
+  --color-oat: #CBBFAF;
+  --color-silk: #E8DED4;
+  --color-veil: #F6F2EB;
+  --color-cream: #FAF8F5;
+  --color-white: #FFFFFF;
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-veil);
+  color: var(--color-espresso);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-oat);
+  color: var(--color-espresso);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-oat);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-shadow);
+}
+
+/* Editorial line animation */
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.line-grow {
+  animation: lineGrow 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  transform-origin: left;
+}
