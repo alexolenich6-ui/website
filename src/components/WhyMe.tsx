@@ -72,21 +72,23 @@ export default function WhyMe() {
                 {/* Hover-grown left rail */}
                 <span className="absolute left-0 top-0 block h-px w-0 bg-espresso group-hover:w-24 transition-all duration-1000 ease-out" />
 
-                <div className="grid grid-cols-12 gap-4 md:gap-8 items-start">
-                  <span className="col-span-3 md:col-span-1 font-sans text-[11px] font-light tracking-[0.3em] text-espresso/35 group-hover:text-espresso transition-colors duration-700 pt-2">
-                    {r.number}
-                  </span>
+                <div className="flex flex-col md:grid md:grid-cols-12 md:gap-8 md:items-start">
+                  <div className="flex items-baseline gap-5 md:contents">
+                    <span className="md:col-span-1 font-sans text-[11px] font-light tracking-[0.3em] text-espresso/35 group-hover:text-espresso transition-colors duration-700 md:pt-2 shrink-0">
+                      {r.number}
+                    </span>
 
-                  <div className="col-span-9 md:col-span-4">
-                    <h3 className="font-serif font-light text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.05] tracking-[-0.02em] text-espresso">
-                      {r.title}
-                    </h3>
-                    <p className="mt-3 md:mt-4 font-sans text-[10px] font-light tracking-[0.4em] uppercase text-espresso/40 group-hover:text-espresso/70 transition-colors duration-700">
-                      {r.keyword}
-                    </p>
+                    <div className="md:col-span-4">
+                      <h3 className="font-serif font-light text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.05] tracking-[-0.02em] text-espresso">
+                        {r.title}
+                      </h3>
+                      <p className="mt-2 md:mt-4 font-sans text-[10px] font-light tracking-[0.4em] uppercase text-espresso/40 group-hover:text-espresso/70 transition-colors duration-700">
+                        {r.keyword}
+                      </p>
+                    </div>
                   </div>
 
-                  <p className="col-span-12 md:col-span-6 md:col-start-7 font-sans text-[13px] md:text-[14px] font-light leading-[1.85] text-espresso/55 group-hover:text-espresso/85 transition-colors duration-700 mt-4 md:mt-2 max-w-[480px]">
+                  <p className="mt-5 md:mt-2 md:col-span-6 md:col-start-7 font-sans text-[13px] md:text-[14px] font-light leading-[1.85] text-espresso/55 group-hover:text-espresso/85 transition-colors duration-700 max-w-[480px]">
                     {r.text}
                   </p>
                 </div>

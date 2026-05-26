@@ -5,8 +5,8 @@ import { useRef } from "react";
 
 const stats = [
   { num: "20+", label: "лет опыта" },
-  { num: "150+", label: "реализованных проектов" },
-  { num: "15–30%", label: "рост стоимости недвижимости" },
+  { num: "150+", label: "проектов" },
+  { num: "15–30%", label: "рост стоимости" },
 ];
 
 export default function Manifesto() {
@@ -55,7 +55,7 @@ export default function Manifesto() {
           <span className="block w-16 h-px bg-espresso/20" />
         </div>
 
-        <div className="grid grid-cols-3 gap-4 md:gap-0 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-3 gap-3 md:gap-0 max-w-[900px] mx-auto">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -67,14 +67,14 @@ export default function Manifesto() {
                 delay: 0.1 + i * 0.12,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className={`text-center px-2 md:px-6 ${
+              className={`text-center px-1 md:px-6 ${
                 i > 0 ? "md:border-l md:border-espresso/10" : ""
               }`}
             >
-              <span className="block font-serif font-light leading-none text-[clamp(2rem,5.5vw,4rem)] text-espresso tracking-[-0.02em]">
+              <span className="block font-serif font-light leading-none text-[clamp(1.75rem,5.5vw,4rem)] text-espresso tracking-[-0.02em]">
                 {stat.num}
               </span>
-              <p className="mt-4 md:mt-6 font-sans text-[10px] font-light tracking-[0.4em] uppercase text-espresso/45 whitespace-nowrap">
+              <p className="mt-4 md:mt-6 font-sans text-[9px] md:text-[10px] font-light tracking-[0.25em] md:tracking-[0.4em] uppercase text-espresso/45 leading-[1.6]">
                 {stat.label}
               </p>
             </motion.div>
