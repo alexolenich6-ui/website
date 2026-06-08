@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Русская сказка и евангельская притча — Суздаль, 29 июня – 2 июля</title>
+<meta name="description" content="Мини-цикл из утренних и вечерних бесед и совместных чтений. Суздаль, 29 июня – 2 июля.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f1ece3;
+    --paper:#f6f2ea;
+    --ink:#211d18;
+    --ink-soft:#4a4339;
+    --muted:#8a7d6a;
+    --rule:#cdc1ad;
+    --accent:#6f6049;
+    --eyebrow:#9a8c75;
+    --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --body:"PT Serif", Georgia, "Times New Roman", serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#2a261f;color:var(--ink);font-family:var(--body)}
+  body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  /* ---------- deck layout ---------- */
+  .deck{
+    height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth;
+  }
+  .slide{
+    scroll-snap-align:start;
+    position:relative;
+    width:100%;min-height:100vh;
+    display:flex;justify-content:center;align-items:center;
+    padding:28px 16px;
+  }
+  /* a poster sheet, vertical 9:16-ish */
+  .sheet{
+    width:min(540px, 96vw);
+    aspect-ratio:9/16;
+    max-height:calc(100vh - 56px);
+    background:var(--paper);
+    display:flex;flex-direction:column;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45), 0 2px 0 rgba(255,255,255,.4) inset;
+  }
+
+  /* ---------- figure ---------- */
+  .fig{
+    position:relative;flex:0 0 auto;
+    height:46%;width:100%;overflow:hidden;background:var(--cream);
+  }
+  .fig.tall{height:54%}
+  .fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .fig .photo{z-index:2}
+  .fig .fallback{z-index:1}
+  .fig .tint{position:absolute;inset:0;z-index:3;mix-blend-mode:multiply;pointer-events:none}
+  .tint-gold{background:linear-gradient(160deg,rgba(201,168,106,.16),rgba(111,96,73,.30))}
+  .tint-dusk{background:linear-gradient(160deg,rgba(122,110,140,.18),rgba(60,52,46,.32))}
+  .tint-sage{background:linear-gradient(160deg,rgba(140,150,120,.16),rgba(80,74,60,.30))}
+  .tint-night{background:linear-gradient(160deg,rgba(70,72,96,.22),rgba(34,29,24,.42))}
+  .fig::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;z-index:4;
+    background:linear-gradient(to top, var(--paper), rgba(246,242,234,0))}
+
+  /* ---------- content ---------- */
+  .content{flex:1 1 auto;display:flex;flex-direction:column;
+    padding:clamp(18px,4.4vw,30px) clamp(20px,5vw,36px) clamp(20px,4vw,30px);
+    overflow:hidden}
+  .eyebrow{font-family:var(--body);font-size:clamp(9px,2vw,11px);font-weight:700;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--eyebrow);
+    line-height:1.6;margin:0 0 auto}
+  .kicker{font-family:var(--body);font-size:clamp(11px,2.4vw,13px);font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+
+  h1{font-family:var(--display);font-weight:600;color:var(--ink);
+    font-size:clamp(28px,7.4vw,46px);line-height:1.04;letter-spacing:.005em;margin:14px 0 0}
+  h2{font-family:var(--display);font-weight:600;color:var(--ink);
+    font-size:clamp(26px,6.6vw,40px);line-height:1.05;margin:0 0 14px}
+  p{font-size:clamp(11.5px,2.55vw,14px);line-height:1.5;color:var(--ink-soft);margin:0 0 10px}
+  p.lead{font-family:var(--display);font-size:clamp(15px,3.6vw,21px);line-height:1.28;
+    color:var(--ink);font-weight:500;margin:0 0 14px}
+
+  ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+  li{position:relative;padding-left:20px;font-size:clamp(11px,2.5vw,13.5px);
+    line-height:1.42;color:var(--ink-soft)}
+  li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;
+    border:1.5px solid var(--accent);transform:rotate(45deg)}
+
+  .scroll{overflow-y:auto;padding-right:6px}
+  .scroll::-webkit-scrollbar{width:5px}
+  .scroll::-webkit-scrollbar-thumb{background:var(--rule);border-radius:4px}
+
+  /* cover meta */
+  .rule{height:1px;background:var(--rule);margin:18px 0;width:100%}
+  .meta{display:flex;align-items:center;gap:14px}
+  .meta svg{flex:0 0 auto;color:var(--accent)}
+  .meta .lines{font-family:var(--body);text-transform:uppercase;letter-spacing:.12em;
+    font-weight:700;font-size:clamp(11px,2.5vw,13px);color:var(--ink);line-height:1.5}
+  .meta .lines small{display:block;font-weight:400;letter-spacing:.1em;color:var(--muted)}
+
+  /* details grid (last slide) */
+  .facts{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+  .fact{display:flex;flex-direction:column;gap:2px}
+  .fact .t{font-family:var(--body);font-weight:700;text-transform:uppercase;
+    letter-spacing:.14em;font-size:clamp(9.5px,2.1vw,11px);color:var(--accent)}
+  .fact .v{font-family:var(--display);font-weight:600;font-size:clamp(17px,4.2vw,24px);
+    color:var(--ink);line-height:1.1}
+  .fact .v small{font-family:var(--body);font-weight:400;font-size:.6em;color:var(--muted);
+    letter-spacing:.05em}
+  .price .v{color:var(--ink)}
+  .ph{color:var(--muted);font-style:italic;font-family:var(--body);font-weight:400;
+    font-size:clamp(12px,2.8vw,15px)}
+
+  .cta{margin-top:auto;padding-top:16px}
+  .cta a{display:inline-block;font-family:var(--body);font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;font-size:clamp(10px,2.3vw,12px);color:var(--ink);
+    text-decoration:none;border:1.5px solid var(--ink);padding:11px 20px;border-radius:2px;
+    transition:.2s}
+  .cta a:hover{background:var(--ink);color:var(--paper)}
+
+  /* ---------- chrome: nav + counter ---------- */
+  .chrome{position:fixed;z-index:50;right:18px;bottom:18px;display:flex;gap:8px;align-items:center}
+  .chrome button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(246,242,234,.4);
+    background:rgba(33,29,24,.55);color:#f6f2ea;font-size:18px;cursor:pointer;backdrop-filter:blur(6px);
+    display:grid;place-items:center;transition:.2s}
+  .chrome button:hover{background:rgba(33,29,24,.85)}
+  .counter{position:fixed;z-index:50;left:18px;bottom:22px;color:#f6f2ea;font-family:var(--body);
+    letter-spacing:.18em;font-size:12px;opacity:.8;font-weight:700}
+  .counter b{font-weight:700}
+  .counter span{opacity:.55}
+  .hint{position:fixed;z-index:50;left:50%;transform:translateX(-50%);bottom:20px;color:#f6f2ea;
+    font-family:var(--body);font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.5}
+
+  @media print{
+    @page{size:540px 960px;margin:0}
+    html,body{background:#fff}
+    .deck{height:auto;overflow:visible;display:block}
+    .slide{min-height:auto;height:960px;page-break-after:always;padding:0;display:block}
+    .sheet{width:540px;height:960px;max-height:none;aspect-ratio:auto;border-radius:0;box-shadow:none}
+    .chrome,.counter,.hint{display:none!important}
+  }
+  @media (max-width:380px){ .sheet{aspect-ratio:auto;max-height:none;min-height:calc(100vh - 56px)} }
+
+  @media (prefers-reduced-motion:reduce){ .deck{scroll-behavior:auto} .cta a{transition:none} }
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+  <!-- ===== SLIDE 1 — COVER ===== -->
+  <section class="slide" aria-label="Обложка">
+    <div class="sheet">
+      <div class="fig tall">
+        <img class="photo" src="images/01-cover.jpg" alt="" onerror="this.remove()">
+        <img class="fallback" src="images/skyline.svg" alt="Силуэт Суздаля с куполами церквей">
+        <div class="tint tint-gold"></div>
+      </div>
+      <div class="content">
+        <p class="eyebrow">Мини-цикл из утренних и вечерних<br>бесед и совместных чтений</p>
+        <h1>Русская сказка<br>и евангельская притча:<br>путь души<br>через испытания</h1>
+        <div class="rule"></div>
+        <div class="meta">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/>
+          </svg>
+          <div class="lines">29 июня – 2 июля<small>Суздаль</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 2 — АНОНС ===== -->
+  <section class="slide" aria-label="Анонс">
+    <div class="sheet">
+      <div class="fig">
+        <img class="photo" src="images/02-anons.jpg" alt="" onerror="this.remove()">
+        <img class="fallback" src="images/path.svg" alt="Лесная тропа, уходящая вдаль">
+        <div class="tint tint-dusk"></div>
+      </div>
+      <div class="content scroll">
+        <h2>Анонс</h2>
+        <p>Русские народные сказки и евангельские притчи редко сопоставляются. Но если присмотреться глубже, окажется, что они говорят об одном и том же – о том, как возделывать в себе человека. В них задаются схожие вопросы: почему мы теряем самое дорогое? Что такой справедливость? Почему одни проходят испытания жизни, а другие ломаются? Что помогает человеку пережить трагедию?</p>
+        <p>На протяжении трёх дней мы будем читать русские народные сказки (от известных до более загадочных и темных) и евангельские притчи (знакомые и не очень), сопоставлять их через призму мифологии, психоанализа и нашей интуиции – и обнаруживать удивительные узоры. Мы попробуем увидеть, почему одни и те же психические процессы на протяжении столетий возбуждают в нас тексты настолько разной природы как сказки и притчи.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 3 — НА КУРСЕ УЗНАЕМ ===== -->
+  <section class="slide" aria-label="На курсе мы узнаем">
+    <div class="sheet">
+      <div class="fig">
+        <img class="photo" src="images/03-uznaem.jpg" alt="" onerror="this.remove()">
+        <img class="fallback" src="images/parable.svg" alt="Раскрытая книга и горящая свеча">
+        <div class="tint tint-sage"></div>
+      </div>
+      <div class="content scroll">
+        <p class="kicker">На курсе мы узнаем</p>
+        <ul>
+          <li>Что общего между евангельскими образами и образами русского фольклора?</li>
+          <li>Почему сказка — это не детская литература, а один из древнейших способов говорить о внутренней жизни человека и направлять его?</li>
+          <li>Почему герои народных сказок постоянно теряют, ищут, проходят испытания и возвращаются домой?</li>
+          <li>Как устроены архетипические сюжеты и почему они продолжают действовать в современной жизни?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 4 — ГЛАВНЫЕ ВОПРОСЫ ===== -->
+  <section class="slide" aria-label="Главные вопросы">
+    <div class="sheet">
+      <div class="fig">
+        <img class="photo" src="images/04-voprosy.jpg" alt="" onerror="this.remove()">
+        <img class="fallback" src="images/path.svg" alt="Лесная тропа, уходящая вдаль">
+        <div class="tint tint-night"></div>
+      </div>
+      <div class="content scroll">
+        <p class="lead">Но главное — мы зададим себе простые и важные вопросы:</p>
+        <ul>
+          <li>Что именно я пытаюсь вернуть в своей жизни и может ли быть, что это невозможно?</li>
+          <li>Почему чтобы что-то обрести порой необходимо что-то потерять?</li>
+          <li>Что я считаю справедливостью – и совпадает ли она с тем, как устроена жизнь?</li>
+          <li>Какие испытания невозможно пройти только с помощью силы?</li>
+          <li>Что значить «спастись» и нужно ли это?</li>
+          <li>Какие истории я продолжаю проживать, даже не замечая этого?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 5 — ДЕТАЛИ ===== -->
+  <section class="slide" aria-label="Детали и запись">
+    <div class="sheet">
+      <div class="fig">
+        <img class="photo" src="images/05-detali.jpg" alt="" onerror="this.remove()">
+        <img class="fallback" src="images/skyline.svg" alt="Панорама Суздаля">
+        <div class="tint tint-gold"></div>
+      </div>
+      <div class="content">
+        <h2>Детали</h2>
+        <div class="facts">
+          <div class="fact"><span class="t">Даты</span><span class="v">29 июня – 2 июля</span></div>
+          <div class="fact"><span class="t">Место</span><span class="v">Суздаль</span></div>
+          <div class="fact price"><span class="t">Стоимость участия</span><span class="v">120 000&nbsp;₽</span></div>
+          <div class="fact"><span class="t">Проживание</span><span class="ph">уточняется — впишите детали</span></div>
+        </div>
+        <div class="cta">
+          <a href="#" id="ctaLink">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- chrome -->
+<div class="counter"><b id="cur">1</b> <span>/ 5</span></div>
+<div class="chrome">
+  <button id="prev" aria-label="Предыдущий слайд">↑</button>
+  <button id="next" aria-label="Следующий слайд">↓</button>
+</div>
+<div class="hint">↑ ↓ &nbsp;листать &nbsp;·&nbsp; P — печать в PDF</div>
+
+<script>
+  const deck = document.getElementById('deck');
+  const slides = [...document.querySelectorAll('.slide')];
+  const cur = document.getElementById('cur');
+  let idx = 0;
+
+  function go(i){
+    idx = Math.max(0, Math.min(slides.length-1, i));
+    slides[idx].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  document.getElementById('next').onclick = ()=>go(idx+1);
+  document.getElementById('prev').onclick = ()=>go(idx-1);
+
+  // track current slide on scroll
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ idx = slides.indexOf(e.target); cur.textContent = idx+1; } });
+  }, {root:deck, threshold:0.55});
+  slides.forEach(s=>io.observe(s));
+
+  // keyboard
+  addEventListener('keydown', (e)=>{
+    if(['ArrowDown','PageDown',' '].includes(e.key)){ e.preventDefault(); go(idx+1); }
+    else if(['ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); go(idx-1); }
+    else if(e.key==='Home'){ go(0); }
+    else if(e.key==='End'){ go(slides.length-1); }
+    else if(e.key==='p'||e.key==='P'){ window.print(); }
+  });
+</script>
+</body>
+</html>
