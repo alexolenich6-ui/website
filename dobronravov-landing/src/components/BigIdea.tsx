@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 
 // Секция 3 — Большая идея (переобрамление). Сердце позиционирования.
@@ -16,16 +17,11 @@ export default function BigIdea() {
         </span>
       </div>
 
-      <div className="max-w-[1240px] mx-auto grid grid-cols-12 gap-y-10 md:gap-16">
-        <AnimateIn className="col-span-12 md:col-span-3" direction="none">
-          <p className="eyebrow md:[writing-mode:vertical-rl] md:rotate-180 md:h-full">
-            Переобрамление
-          </p>
-        </AnimateIn>
-
-        <div className="col-span-12 md:col-span-9 space-y-10 md:space-y-14">
+      <div className="max-w-[1680px] mx-auto grid grid-cols-12 gap-y-12 md:gap-16 items-center">
+        <div className="col-span-12 lg:col-span-7 space-y-10 md:space-y-14">
           <AnimateIn>
-            <p className="font-serif font-light text-[clamp(1.9rem,4.8vw,4rem)] leading-[1.16] tracking-[-0.025em] text-paper">
+            <p className="eyebrow mb-8">Переобрамление</p>
+            <p className="font-serif font-light text-[clamp(1.9rem,4.4vw,3.8rem)] leading-[1.16] tracking-[-0.025em] text-paper">
               Тревога, зависимость, апатия — не&nbsp;приговор. Это{" "}
               <span className="italic text-gold">сигнал</span>: ты потерял
               связь с&nbsp;собой.
@@ -35,13 +31,25 @@ export default function BigIdea() {
           <AnimateIn delay={0.12}>
             <div className="flex items-start gap-5">
               <span className="mt-4 hidden md:block h-px w-16 shrink-0 bg-gold/40" />
-              <p className="font-sans text-[15px] md:text-[17px] font-light leading-[1.95] text-paper/65 max-w-[640px]">
+              <p className="font-sans text-[15px] md:text-[17px] font-light leading-[1.95] text-paper/65 max-w-[560px]">
                 Я не&nbsp;«чиню» симптом. Мы&nbsp;идём глубже — к&nbsp;корню —
                 и&nbsp;возвращаем тебе авторство собственной жизни.
               </p>
             </div>
           </AnimateIn>
         </div>
+
+        <AnimateIn delay={0.15} className="col-span-12 lg:col-span-4 lg:col-start-9">
+          <div className="relative aspect-[3/4] w-full overflow-hidden bg-ink">
+            <Image
+              src="/portrait/band.jpg"
+              alt="Давид Добронравов"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

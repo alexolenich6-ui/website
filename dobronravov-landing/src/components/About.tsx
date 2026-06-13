@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 
 // Секция 4 — Обо мне (главный блок доверия).
@@ -37,20 +38,24 @@ export default function About() {
         </AnimateIn>
 
         <div className="grid grid-cols-12 gap-8 md:gap-16">
-          {/* Portrait — ASSET PENDING.
-              §6 фото: d1bf7fb4 (деловой портрет) или 9ca52427 (ч/б).
-              Когда фото загружено в public/portrait/about.jpg, заменить
-              .asset-slot на:
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <Image src="/portrait/about.jpg" alt="Давид Добронравов"
-                  fill className="object-cover" sizes="(max-width:1024px) 100vw, 45vw" />
-              </div>
-              См. ASSETS.md */}
           <AnimateIn className="col-span-12 lg:col-span-5">
-            <div
-              className="asset-slot aspect-[3/4] w-full"
-              data-label="Портрет · фото"
-            />
+            <div className="relative aspect-[3/4] w-full overflow-hidden bg-deep">
+              <Image
+                src="/portrait/about.jpg"
+                alt="Давид Добронравов — клинический психолог"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
+              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                <span className="font-sans text-[10px] font-light tracking-[0.4em] uppercase text-paper/80">
+                  Давид Добронравов
+                </span>
+                <span className="font-sans text-[10px] font-light tracking-[0.4em] uppercase text-paper/50">
+                  Москва
+                </span>
+              </div>
+            </div>
           </AnimateIn>
 
           {/* Bio */}
@@ -114,14 +119,16 @@ export default function About() {
             </AnimateIn>
           </div>
 
-          {/* Priest-path image — ASSET PENDING.
-              §6 фото: e8020217 (свеча в полумраке храма, кинематографично).
-              public/portrait/path.jpg → заменить .asset-slot на <Image>. */}
           <AnimateIn className="col-span-12 lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
-            <div
-              className="asset-slot aspect-[4/5] w-full"
-              data-label="Путь · фото"
-            />
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-deep">
+              <Image
+                src="/portrait/path.jpg"
+                alt="Служение — годы рядом с людьми в самом тяжёлом"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+              />
+            </div>
           </AnimateIn>
         </div>
       </div>
