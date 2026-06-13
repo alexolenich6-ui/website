@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimateIn from "./AnimateIn";
+import { asset } from "@/lib/asset";
 
 // Секция 3 — Большая идея (переобрамление). Сердце позиционирования.
 export default function BigIdea() {
@@ -42,7 +43,7 @@ export default function BigIdea() {
         <AnimateIn delay={0.15} className="col-span-12 lg:col-span-4 lg:col-start-9">
           <div className="relative aspect-[3/4] w-full overflow-hidden bg-ink">
             <Image
-              src="/portrait/band.jpg"
+              src={asset("/portrait/band.jpg")}
               alt="Давид Добронравов"
               fill
               className="object-cover object-top"

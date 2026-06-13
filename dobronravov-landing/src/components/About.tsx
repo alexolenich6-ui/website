@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimateIn from "./AnimateIn";
+import { asset } from "@/lib/asset";
 
 // Секция 4 — Обо мне (главный блок доверия).
 // Путь как источник глубины. Священство — второй слой, без проповеди (§7).
@@ -41,7 +42,7 @@ export default function About() {
           <AnimateIn className="col-span-12 lg:col-span-5">
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-deep">
               <Image
-                src="/portrait/about.jpg"
+                src={asset("/portrait/about.jpg")}
                 alt="Давид Добронравов — клинический психолог"
                 fill
                 className="object-cover object-center"
@@ -122,7 +123,7 @@ export default function About() {
           <AnimateIn className="col-span-12 lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-deep">
               <Image
-                src="/portrait/path.jpg"
+                src={asset("/portrait/path.jpg")}
                 alt="Служение — годы рядом с людьми в самом тяжёлом"
                 fill
                 className="object-cover object-center"

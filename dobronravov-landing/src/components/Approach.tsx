@@ -3,6 +3,7 @@
 import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 import CtaButton from "./CtaButton";
+import { asset } from "@/lib/asset";
 
 // Секция 5 — Как я работаю. Завершается повтором CTA.
 const points = [
@@ -51,7 +52,7 @@ export default function Approach() {
           <AnimateIn className="col-span-12 lg:col-span-5">
             <div className="relative h-full min-h-[360px] aspect-[4/5] lg:aspect-auto w-full overflow-hidden bg-ink">
               <Image
-                src="/portrait/approach.jpg"
+                src={asset("/portrait/approach.jpg")}
                 alt="Давид Добронравов на сессии"
                 fill
                 className="object-cover object-center"
