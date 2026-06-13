@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand palette — 80% dark / 15% light / 5% accent */
+  --color-ink: #1f2328; /* primary dark background */
+  --color-deep: #24343a; /* secondary deep blue */
+  --color-graphite: #3d4a4f; /* slate-graphite */
+  --color-paper: #f2eee8; /* light background / light text */
+  --color-cream: #faf8f3; /* softest light */
+  --color-gold: #a58a58; /* warm gold accent */
+  --color-terra: #a36a45; /* terracotta accent */
+
+  --font-serif: var(--font-cormorant), "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: initial;
+    font-feature-settings: "ss01", "ss02", "kern";
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 138, 88, 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(165, 138, 88, 0.45);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Editorial primitives */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(165, 138, 88, 0.65);
+}
+
+.hairline {
+  display: block;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+/* Hide scrollbar on horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Asset slot — refined placeholder for imagery awaiting upload.
+   Renders as an on-brand framed void, never a fake stock block. */
+.asset-slot {
+  position: relative;
+  background:
+    radial-gradient(
+      120% 90% at 50% 18%,
+      rgba(165, 138, 88, 0.08),
+      transparent 60%
+    ),
+    var(--color-deep);
+  border: 1px solid rgba(242, 238, 232, 0.08);
+}
+.asset-slot::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(242, 238, 232, 0.28);
+  white-space: nowrap;
+}
