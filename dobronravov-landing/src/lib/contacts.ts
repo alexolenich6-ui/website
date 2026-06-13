@@ -11,9 +11,8 @@ export const CONTACTS = {
   name: "Давид Добронравов",
   role: "Клинический психолог",
 
-  // TODO(§9.1): заменить на реальный Telegram-username Давида.
-  telegramDmUrl: "https://t.me/CHANGE_ME",
-  telegramHandle: "@CHANGE_ME",
+  telegramDmUrl: "https://t.me/DavidDobronravov",
+  telegramHandle: "@DavidDobronravov",
 
   // TODO(§9): ссылка на Telegram-канал (необязательно).
   telegramChannelUrl: "",
