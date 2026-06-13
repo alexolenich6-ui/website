@@ -1,17 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Literata, Onest } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+// Заголовки — Literata (гуманистическая антиква с полной кириллицей).
+const heading = Literata({
+  variable: "--font-heading",
   subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+// Текст — Onest (современный гротеск, спроектирован под кириллицу).
+const body = Onest({
+  variable: "--font-body",
   subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500"],
   display: "swap",
@@ -60,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${cormorant.variable} ${inter.variable} antialiased`}
+      className={`${heading.variable} ${body.variable} antialiased`}
     >
       <body>
         {children}
