@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     // TODO: добавить /og/cover.jpg (1200×630) после загрузки фото.
     // images: [{ url: "/og/cover.jpg", width: 1200, height: 630 }],
   },
+  // Превью-деплой на GitHub Pages не индексируем (черновик с плейсхолдерами).
+  // На боевом домене переменную GITHUB_PAGES не задаём — индексация включена.
+  ...(process.env.GITHUB_PAGES === "true"
+    ? { robots: { index: false, follow: false } }
+    : {}),
 };
 
 export const viewport: Viewport = {
