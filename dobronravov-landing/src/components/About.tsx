@@ -67,26 +67,28 @@ export default function About() {
 
             <AnimateIn delay={0.15}>
               <p className="font-sans text-[15px] md:text-[16px] font-light leading-[1.95] text-paper/70 mb-7">
-                Я пришёл в&nbsp;психологию не&nbsp;как в&nbsp;профессию. Сначала
-                было служение — годы рядом с&nbsp;людьми в&nbsp;самом тяжёлом:
-                горе, утрата, зависимость, болезнь, вопросы, на&nbsp;которые
-                нет простых ответов.
+                Я пришёл в&nbsp;психологию не&nbsp;сразу. Сначала было
+                служение — годы рядом с&nbsp;людьми в&nbsp;самом тяжёлом:
+                горе, утрата, зависимость, болезнь. Вопросы,
+                на&nbsp;которые нет лёгких ответов.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.2}>
               <p className="font-sans text-[15px] md:text-[16px] font-light leading-[1.95] text-paper/70 mb-7">
-                Потом — клиническая психология и&nbsp;психиатрическая клиника,
-                где я&nbsp;научился различать, где кризис, а&nbsp;где болезнь,
-                и&nbsp;где нужен психиатр.
+                Потом — клиническая психология и&nbsp;работа
+                в&nbsp;психиатрической клинике. Там я&nbsp;научился отличать
+                кризис от&nbsp;болезни и&nbsp;видеть, где человеку нужен уже
+                не&nbsp;психолог, а&nbsp;психиатр.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.25}>
               <p className="font-sans text-[15px] md:text-[16px] font-light leading-[1.95] text-paper/70 mb-12">
-                Так появился специалист, которого не&nbsp;напугать симптомом
-                и&nbsp;не&nbsp;шокировать признанием. Я&nbsp;был там, где темно.
-                И&nbsp;не&nbsp;отворачиваюсь.
+                Так и&nbsp;сложился специалист, которого не&nbsp;напугать
+                ни&nbsp;симптомом, ни&nbsp;признанием. Я&nbsp;знаю эту дорогу
+                не&nbsp;по&nbsp;учебникам — я&nbsp;сам по&nbsp;ней шёл. Поэтому
+                иду рядом, а&nbsp;не&nbsp;сверху.
               </p>
             </AnimateIn>
 
@@ -112,10 +114,11 @@ export default function About() {
             <AnimateIn>
               <p className="eyebrow mb-8">Откуда глубина</p>
               <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper/85 max-w-[560px]">
-                Четырнадцать лет служения — рядом с&nbsp;людьми в&nbsp;горе,
-                утрате, зависимости. Это не&nbsp;строчка в&nbsp;резюме,
-                а&nbsp;<span className="italic text-gold">объёмное зрение</span>,
-                которое не&nbsp;купить за&nbsp;партой.
+                Четырнадцать лет рядом с&nbsp;людьми в&nbsp;горе, утрате,
+                зависимости. Это не&nbsp;строчка в&nbsp;резюме —
+                это <span className="italic text-gold">объёмное зрение</span>,
+                которое не&nbsp;получишь за&nbsp;партой. Я&nbsp;видел тёмное
+                вблизи и&nbsp;не&nbsp;разучился быть рядом.
               </p>
             </AnimateIn>
           </div>
