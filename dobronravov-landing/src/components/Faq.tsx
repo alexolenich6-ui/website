@@ -52,7 +52,7 @@ export default function Faq() {
         <AnimateIn className="col-span-12 md:col-span-4">
           <p className="eyebrow mb-6">Вопросы</p>
           <h2 className="font-serif font-light text-[clamp(2rem,4vw,3.4rem)] leading-[1.05] tracking-[-0.03em] text-paper">
-            Честно <span className="italic text-gold">о главном</span>
+            Что меня обычно <span className="italic text-gold">спрашивают</span>
           </h2>
         </AnimateIn>
 

@@ -21,7 +21,7 @@ export default function BigIdea() {
       <div className="max-w-[1680px] mx-auto grid grid-cols-12 gap-y-12 md:gap-16 items-center">
         <div className="col-span-12 lg:col-span-7 space-y-10 md:space-y-14">
           <AnimateIn>
-            <p className="eyebrow mb-8">Переобрамление</p>
+            <p className="eyebrow mb-8">Если коротко</p>
             <p className="font-serif font-light text-[clamp(1.9rem,4.4vw,3.8rem)] leading-[1.16] tracking-[-0.025em] text-paper">
               Тревога, зависимость, апатия — не&nbsp;приговор. Это{" "}
               <span className="italic text-gold">сигнал</span>: ты потерял

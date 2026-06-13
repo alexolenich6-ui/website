@@ -32,8 +32,8 @@ export default function About() {
           <div className="grid grid-cols-12 gap-4 mb-16 md:mb-28">
             <p className="eyebrow col-span-12 md:col-span-2">Обо мне</p>
             <h2 className="col-span-12 md:col-span-10 md:col-start-3 font-serif font-light text-[clamp(2.2rem,6vw,5.25rem)] leading-[0.98] tracking-[-0.03em] text-paper">
-              Я был там, где <span className="italic text-gold">темно</span>.
-              <br className="hidden md:block" /> И не отворачиваюсь.
+              Я пришёл в психологию{" "}
+              <span className="italic text-gold">не сразу</span>.
             </h2>
           </div>
         </AnimateIn>
@@ -62,15 +62,14 @@ export default function About() {
           {/* Bio */}
           <div className="col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col justify-center">
             <AnimateIn delay={0.1}>
-              <p className="eyebrow mb-8">Путь</p>
+              <p className="eyebrow mb-8">Как было</p>
             </AnimateIn>
 
             <AnimateIn delay={0.15}>
               <p className="font-sans text-[15px] md:text-[16px] font-light leading-[1.95] text-paper/70 mb-7">
-                Я пришёл в&nbsp;психологию не&nbsp;сразу. Сначала было
-                служение — годы рядом с&nbsp;людьми в&nbsp;самом тяжёлом:
-                горе, утрата, зависимость, болезнь. Вопросы,
-                на&nbsp;которые нет лёгких ответов.
+                Сначала было служение — годы рядом с&nbsp;людьми
+                в&nbsp;самом тяжёлом: горе, утрата, зависимость, болезнь.
+                Вопросы, на&nbsp;которые нет лёгких ответов.
               </p>
             </AnimateIn>
 
@@ -112,7 +111,7 @@ export default function About() {
         <div className="grid grid-cols-12 gap-8 md:gap-16 mt-20 md:mt-36 items-center">
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 flex flex-col justify-center">
             <AnimateIn>
-              <p className="eyebrow mb-8">Откуда глубина</p>
+              <p className="eyebrow mb-8">Откуда я это знаю</p>
               <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper/85 max-w-[560px]">
                 Четырнадцать лет рядом с&nbsp;людьми в&nbsp;горе, утрате,
                 зависимости. Это не&nbsp;строчка в&nbsp;резюме —

@@ -17,12 +17,22 @@ export default function Audience() {
         </span>
       </div>
 
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+      <div className="max-w-[1240px] mx-auto">
         <AnimateIn>
-          <div className="flex items-center gap-4 mb-8">
-            <span className="font-serif text-[1.6rem] text-gold leading-none">
-              +
-            </span>
+          <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
+            <p className="eyebrow col-span-12 md:col-span-2">Для кого</p>
+            <h2 className="col-span-12 md:col-span-10 md:col-start-3 font-serif font-light text-[clamp(2.2rem,6vw,5.25rem)] leading-[0.98] tracking-[-0.03em] text-paper">
+              С кем у нас <span className="italic text-gold">сложится</span>
+            </h2>
+          </div>
+        </AnimateIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+          <AnimateIn>
+            <div className="flex items-center gap-4 mb-8">
+              <span className="font-serif text-[1.6rem] text-gold leading-none">
+                +
+              </span>
             <p className="eyebrow !text-gold/70">Со мной стоит работать</p>
           </div>
           <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper">
@@ -45,6 +55,7 @@ export default function Audience() {
             время.
           </p>
         </AnimateIn>
+        </div>
       </div>
     </section>
   );

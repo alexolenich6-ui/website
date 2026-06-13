@@ -42,7 +42,8 @@ export default function Approach() {
           <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
             <p className="eyebrow col-span-12 md:col-span-2">Как я работаю</p>
             <h2 className="col-span-12 md:col-span-10 md:col-start-3 font-serif font-light text-[clamp(2.2rem,6vw,5.25rem)] leading-[0.98] tracking-[-0.03em] text-paper">
-              Не починить, <span className="italic text-gold">а пройти</span>.
+              Работаю не быстро,{" "}
+              <span className="italic text-gold">а вглубь</span>.
             </h2>
           </div>
         </AnimateIn>
