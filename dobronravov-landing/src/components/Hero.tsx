@@ -118,8 +118,8 @@ export default function Hero() {
           className="pt-8 md:pt-10 border-t border-paper/10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end"
         >
           <p className="md:col-span-6 font-sans text-[13px] md:text-[15px] font-light leading-[1.85] text-paper/70 max-w-[520px]">
-            Зависимость, тревога, кризис, потеря — это про то, что человек
-            потерял контакт с&nbsp;собой. Помогаю его&nbsp;восстановить.
+            Зависимость, тревога, кризис — это не&nbsp;поломка. Это сигнал,
+            что ты потерял контакт с&nbsp;собой. Помогаю его вернуть.
           </p>
 
           <div className="md:col-span-6 flex flex-col md:items-end gap-7">

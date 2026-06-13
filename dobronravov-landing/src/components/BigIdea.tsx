@@ -33,8 +33,9 @@ export default function BigIdea() {
             <div className="flex items-start gap-5">
               <span className="mt-4 hidden md:block h-px w-16 shrink-0 bg-gold/40" />
               <p className="font-sans text-[15px] md:text-[17px] font-light leading-[1.95] text-paper/65 max-w-[560px]">
-                Я не&nbsp;«чиню» симптом. Мы&nbsp;идём глубже — к&nbsp;корню —
-                и&nbsp;возвращаем тебе авторство собственной жизни.
+                Я не&nbsp;латаю симптом. Мы&nbsp;идём глубже, к&nbsp;самому
+                корню — туда, где ты снова берёшь руль собственной жизни
+                в&nbsp;свои руки.
               </p>
             </div>
           </AnimateIn>
