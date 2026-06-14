@@ -16,7 +16,7 @@ export default function Recognition() {
   return (
     <section
       id="recognition"
-      className="relative bg-ink px-6 md:px-16 lg:px-24 py-32 md:py-52 overflow-hidden"
+      className="relative bg-deep px-6 md:px-16 lg:px-24 py-32 md:py-52 overflow-hidden"
     >
       <SectionIndex n="02" label="Узнавание" />
 

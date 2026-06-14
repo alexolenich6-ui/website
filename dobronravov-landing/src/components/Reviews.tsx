@@ -25,7 +25,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="relative bg-deep px-6 md:px-16 lg:px-24 py-32 md:py-52 overflow-hidden"
+      className="relative bg-ink px-6 md:px-16 lg:px-24 py-32 md:py-52 overflow-hidden"
     >
       <div className="absolute top-10 md:top-16 right-6 md:right-16 flex items-center gap-3">
         <span className="block w-10 h-px bg-paper/15" />

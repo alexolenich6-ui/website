@@ -16,7 +16,7 @@ export default function Footer() {
   ].filter((s) => s.show);
 
   return (
-    <footer className="bg-ink px-6 md:px-12 lg:px-16 pb-10 pt-20 md:pt-28">
+    <footer className="bg-deep px-6 md:px-12 lg:px-16 pb-10 pt-20 md:pt-28">
       <div className="max-w-[1680px] mx-auto">
         <div className="border-t border-paper/[0.1] pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
           <a href="#hero" className="flex items-center gap-3">

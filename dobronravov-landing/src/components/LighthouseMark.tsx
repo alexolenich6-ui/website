@@ -1,7 +1,7 @@
 /**
- * Монограмма-маяк — упрощённая интерпретация знака из брендбука.
- * Маяк = свет из тьмы, ложится в метафору «проводник через тёмное».
- * Тонкие линии, тёплое золото. Декоративный — aria-hidden.
+ * Монограмма-маяк — по брендбуку (раздел 09): тонкая линия, маяк на скале
+ * с вьющейся дорогой к нему внутри кольца, свет наверху. Тёплое золото.
+ * Декоративный — aria-hidden.
  */
 export default function LighthouseMark({
   className = "",
@@ -14,44 +14,35 @@ export default function LighthouseMark({
       fill="none"
       aria-hidden="true"
       className={className}
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <circle
-        cx="24"
-        cy="24"
-        r="22.5"
-        stroke="currentColor"
-        strokeOpacity="0.5"
-        strokeWidth="1"
-      />
-      {/* Tower */}
-      <path
-        d="M21 33 L20 18 L28 18 L27 33 Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-      {/* Lantern room */}
-      <path
-        d="M20 18 L19 14 L29 14 L28 18 Z"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinejoin="round"
-      />
-      <path d="M22 14 L22 11 L26 11 L26 14" stroke="currentColor" strokeWidth="1" />
-      {/* Light beams */}
-      <path
-        d="M18 12 L13 10 M30 12 L35 10"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      {/* Ground / shore line */}
-      <path
-        d="M14 34 C18 35.5 30 35.5 34 34"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
+      {/* Кольцо */}
+      <circle cx="24" cy="24" r="21.5" strokeOpacity="0.55" />
+
+      {/* Свет наверху */}
+      <circle cx="24" cy="13.5" r="0.6" fill="currentColor" stroke="none" />
+      <path d="M24 9.4V8M19.6 11.6l-1.3-.7M28.4 11.6l1.3-.7" strokeOpacity="0.7" />
+
+      {/* Крыша фонаря */}
+      <path d="M21.2 14.2 24 10.8l2.8 3.4" />
+      {/* Фонарная комната */}
+      <path d="M21.2 14.2h5.6l-.5 3h-4.6z" />
+      {/* Галерея */}
+      <path d="M20.6 17.2h6.8" />
+      {/* Башня, сужается кверху */}
+      <path d="M21.4 17.2 20 30h8l-1.4-12.8" />
+      {/* Поясок на башне */}
+      <path d="M20.7 23.6h6.6" strokeOpacity="0.6" />
+
+      {/* Скала / основание */}
+      <path d="M12 30.5c4 2.2 20 2.2 24 0" strokeOpacity="0.7" />
+
+      {/* Вьющаяся дорога к маяку (расширяется к низу) */}
+      <path d="M22.8 30.5C21 34 15.5 35.5 13 41.5" />
+      <path d="M25.2 30.5C26.5 35 22.5 37.5 20.5 42" />
     </svg>
   );
 }
