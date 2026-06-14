@@ -84,30 +84,30 @@ export default function Hero() {
         </div>
 
         {/* Massive headline */}
-        <div className="-mx-1">
-          <div className="overflow-hidden pb-1">
-            <motion.h1
+        <h1 className="-mx-1 font-serif text-[clamp(3.2rem,12vw,12rem)] font-light leading-[0.94] tracking-[-0.035em]">
+          <span className="block overflow-hidden pb-1">
+            <motion.span
               variants={reveal}
               initial="hidden"
               animate="visible"
               custom={1}
-              className="font-serif text-[clamp(3.2rem,12vw,12rem)] font-light leading-[0.94] tracking-[-0.035em] text-paper"
+              className="block text-paper"
             >
               Вернуться
-            </motion.h1>
-          </div>
-          <div className="overflow-hidden pb-1">
-            <motion.h1
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden pb-1">
+            <motion.span
               variants={reveal}
               initial="hidden"
               animate="visible"
               custom={2}
-              className="font-serif text-[clamp(3.2rem,12vw,12rem)] font-light italic leading-[0.94] tracking-[-0.035em] text-gold pl-[0.1em]"
+              className="block italic text-gold pl-[0.1em]"
             >
               к&nbsp;себе
-            </motion.h1>
-          </div>
-        </div>
+            </motion.span>
+          </span>
+        </h1>
 
         {/* Bottom row */}
         <motion.div

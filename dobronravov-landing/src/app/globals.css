@@ -24,6 +24,18 @@
   body {
     margin: 0;
   }
+
+  /* Кликабельные кнопки — курсор-рука (Tailwind v4 не добавляет сам). */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /* Видимый фокус для навигации с клавиатуры. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 }
 
 html.lenis,
