@@ -56,8 +56,8 @@ export default function Hero() {
       {/* TEXT — bottom on mobile, left column on desktop */}
       <div className="order-2 lg:order-1 flex flex-col justify-between bg-ink px-6 md:px-12 lg:px-16 xl:px-24 pt-8 lg:pt-40 pb-10 lg:pb-16">
 
-        {/* Eyebrow — hidden on mobile to save space */}
-        <div className="overflow-hidden hidden lg:block">
+        {/* Eyebrow */}
+        <div className="overflow-hidden">
           <motion.p
             variants={reveal}
             initial="hidden"
