@@ -22,40 +22,19 @@ export default function Audience() {
           <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
             <p className="eyebrow col-span-12 md:col-span-2">Для кого</p>
             <h2 className="col-span-12 md:col-span-10 md:col-start-3 font-serif font-light text-[clamp(2.2rem,6vw,5.25rem)] leading-[0.98] tracking-[-0.03em] text-paper">
-              С кем у нас <span className="italic text-gold">сложится</span>
+              Для каждого, у кого{" "}
+              <span className="italic text-gold">душа не на месте</span>
             </h2>
           </div>
         </AnimateIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-          <AnimateIn>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="font-serif text-[1.6rem] text-gold leading-none">
-                +
-              </span>
-            <p className="eyebrow !text-gold/70">Со мной стоит работать</p>
-          </div>
-          <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper">
-            Если ты дошёл до точки, где дальше так нельзя — и&nbsp;готов
-            не&nbsp;на&nbsp;чудо за&nbsp;один раз, а&nbsp;на&nbsp;настоящую
-            работу над собой.
+        <AnimateIn delay={0.1}>
+          <p className="font-serif font-light text-[clamp(1.5rem,3.5vw,2.6rem)] leading-[1.35] tracking-[-0.02em] text-paper/85 max-w-[820px]">
+            Если вы живёте не своей жизнью. Если запутались и не знаете,
+            куда идти. Если внутри — тревога, пустота или боль. Если вам
+            просто нужно, чтобы кто-то выслушал, — приходите.
           </p>
         </AnimateIn>
-
-        <AnimateIn delay={0.12}>
-          <div className="flex items-center gap-4 mb-8">
-            <span className="font-serif text-[1.6rem] text-paper/35 leading-none">
-              —
-            </span>
-            <p className="eyebrow">Возможно, я не твой специалист</p>
-          </div>
-          <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper/55">
-            Если ты ищешь быстрый совет или «волшебную таблетку»
-            за&nbsp;одну встречу. Это честно — так мы&nbsp;оба сэкономим
-            время.
-          </p>
-        </AnimateIn>
-        </div>
       </div>
     </section>
   );

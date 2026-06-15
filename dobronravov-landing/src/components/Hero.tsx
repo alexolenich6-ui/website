@@ -79,12 +79,12 @@ export default function Hero() {
             custom={0}
             className="font-sans text-[10px] md:text-[11px] font-light tracking-[0.5em] uppercase text-gold/70"
           >
-            Давид Добронравов · Клинический психолог
+            Давид Добронравов · Клинический психолог с опытом священнического служения
           </motion.p>
         </div>
 
         {/* Massive headline */}
-        <h1 className="-mx-1 font-serif text-[clamp(3.2rem,12vw,12rem)] font-light leading-[0.94] tracking-[-0.035em]">
+        <h1 className="-mx-1 font-serif text-[clamp(2.4rem,8vw,8rem)] font-light leading-[1.0] tracking-[-0.03em]">
           <span className="block overflow-hidden pb-1">
             <motion.span
               variants={reveal}
@@ -93,7 +93,7 @@ export default function Hero() {
               custom={1}
               className="block text-paper"
             >
-              Вернуться
+              Когда тревога,
             </motion.span>
           </span>
           <span className="block overflow-hidden pb-1">
@@ -102,9 +102,20 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={2}
-              className="block italic text-gold pl-[0.1em]"
+              className="block italic text-gold pl-[0.05em]"
             >
-              к&nbsp;себе
+              зависимость
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden pb-1">
+            <motion.span
+              variants={reveal}
+              initial="hidden"
+              animate="visible"
+              custom={3}
+              className="block text-paper"
+            >
+              или пустота мешают жить.
             </motion.span>
           </span>
         </h1>
@@ -118,21 +129,18 @@ export default function Hero() {
           className="pt-8 md:pt-10 border-t border-paper/10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end"
         >
           <p className="md:col-span-6 font-sans text-[13px] md:text-[15px] font-light leading-[1.85] text-paper/70 max-w-[520px]">
-            Зависимость, тревога, апатия, кризис — это не&nbsp;поломка,
-            которую надо чинить. Это сигнал: ты живёшь не&nbsp;свою жизнь.
-            Я&nbsp;помогаю вернуться к&nbsp;себе.
+            Вы держитесь, терпите, заглушаете — а легче не&nbsp;становится
+            или становится на&nbsp;время. Я&nbsp;помогаю разобраться,
+            что с&nbsp;вами происходит, и&nbsp;вернуть себе опору внутри,
+            чтобы вы снова понимали, чего хотите, и&nbsp;жили свою жизнь.
           </p>
 
           <div className="md:col-span-6 flex flex-col md:items-end gap-7">
             <CtaButton />
-            {/* §9.3 — формулировка стажа на согласовании. */}
             <p className="font-sans text-[10px] font-light tracking-[0.32em] uppercase text-paper/40 leading-[2.2]">
-              Клинический психолог · опыт психиатрии ·{" "}
-              <span className="text-paper/55">17+ лет рядом с людьми</span>
+              Клинический психолог · 13&nbsp;лет служил священником ·{" "}
+              <span className="text-paper/55">17 лет помогаю людям</span>
             </p>
-            {/* TODO(§9.2) — соц-доказательство («тысячи прошли этот путь» /
-                «1000+ получили поддержку») вставить после согласования финала.
-                Сознательно не выводим непроверённое число (этика §7). */}
           </div>
         </motion.div>
       </motion.div>
