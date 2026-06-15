@@ -54,34 +54,30 @@ export default function Hero() {
       </div>
 
       {/* TEXT — bottom on mobile, left column on desktop */}
-      <div className="order-2 lg:order-1 flex flex-col justify-between bg-ink px-6 md:px-12 lg:px-16 xl:px-24 pt-8 lg:pt-40 pb-10 lg:pb-16">
+      <div className="order-2 lg:order-1 flex flex-col gap-6 bg-ink px-6 md:px-12 lg:px-16 xl:px-24 pt-8 lg:pt-40 pb-12 lg:pb-16 lg:justify-between">
 
         {/* Eyebrow */}
-        <div className="overflow-hidden">
+        <motion.p
+          variants={reveal}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+          className="font-sans text-[10px] font-light tracking-[0.45em] uppercase text-gold/70"
+        >
+          Давид Добронравов · Клинический психолог
+        </motion.p>
+
+        {/* Headline */}
+        <div className="space-y-2">
           <motion.p
             variants={reveal}
             initial="hidden"
             animate="visible"
-            custom={0}
-            className="font-sans text-[10px] font-light tracking-[0.5em] uppercase text-gold/60"
+            custom={1}
+            className="font-serif italic font-light text-[1.1rem] lg:text-[1.3rem] leading-[1.4] text-paper/55"
           >
-            Давид Добронравов · Клинический психолог
+            Когда тревога, зависимость или пустота мешают жить —
           </motion.p>
-        </div>
-
-        {/* Headline */}
-        <div className="space-y-2 lg:space-y-4 mt-4 lg:mt-0">
-          <div className="overflow-hidden">
-            <motion.p
-              variants={reveal}
-              initial="hidden"
-              animate="visible"
-              custom={1}
-              className="font-serif italic font-light text-[clamp(0.9rem,3.5vw,1.4rem)] leading-[1.4] text-paper/40"
-            >
-              Когда тревога, зависимость или пустота мешают жить —
-            </motion.p>
-          </div>
 
           <h1 className="font-serif font-light leading-[0.92] tracking-[-0.04em]">
             <span className="block overflow-hidden pb-1">
@@ -106,7 +102,7 @@ export default function Hero() {
         {/* Bottom content */}
         <motion.div
           variants={fadeUp} initial="hidden" animate="visible" custom={0}
-          className="flex flex-col gap-5 pt-6 mt-6 border-t border-paper/10"
+          className="flex flex-col gap-5 pt-6 border-t border-paper/10"
         >
           <p className="font-sans text-[13px] lg:text-[14px] font-light leading-[1.85] text-paper/55 max-w-[420px]">
             Вы держитесь, терпите, заглушаете — а легче не&nbsp;становится.
