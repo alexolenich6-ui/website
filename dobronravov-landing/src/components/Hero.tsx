@@ -2,7 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import CtaButton from "./CtaButton";
+import { asset } from "@/lib/asset";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -40,13 +42,29 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] w-full overflow-hidden bg-ink"
     >
+      {/* Portrait — right half, fades into ink */}
       <motion.div
         style={{ y: glowY }}
         className="pointer-events-none absolute inset-0"
         aria-hidden
       >
-        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 h-[70vh] w-[120vw] bg-[radial-gradient(closest-side,rgba(165,138,88,0.16),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink/20 to-ink" />
+        {/* Photo — right side on desktop, full-bleed dimmed on mobile */}
+        <div className="absolute inset-0 lg:left-[44%]">
+          <Image
+            src={asset("/portrait/band.jpg")}
+            alt="Давид Добронравов"
+            fill
+            className="object-cover object-top"
+            priority
+            sizes="(max-width: 1024px) 100vw, 56vw"
+          />
+        </div>
+        {/* Gradient: left fade so text stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 lg:via-ink/60 to-transparent" />
+        {/* Bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60" />
+        {/* Subtle gold glow */}
+        <div className="absolute -top-[20%] left-1/4 h-[60vh] w-[60vw] bg-[radial-gradient(closest-side,rgba(165,138,88,0.1),transparent)]" />
       </motion.div>
 
       <motion.div
