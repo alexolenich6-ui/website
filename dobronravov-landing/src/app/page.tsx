@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Recognition from "@/components/Recognition";
 import BigIdea from "@/components/BigIdea";
+import Cases from "@/components/Cases";
 import About from "@/components/About";
 import Approach from "@/components/Approach";
 import Audience from "@/components/Audience";
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <Recognition />
         <BigIdea />
+        <Cases />
         <About />
         <Approach />
         <Audience />

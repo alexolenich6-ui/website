@@ -2,65 +2,52 @@
 
 import AnimateIn from "./AnimateIn";
 
-const cases = [
-  {
-    name: "Сергей, 41 год",
-    story:
-      "Пил с 14 до 38 лет. Боялся, что без алкоголя жизнь станет серой и безрадостной. Сомневался, что справится. Работали долго. Разбирали убеждения, привычки, страхи.",
-    result: "Три года трезвости. Говорит: «Это лучшее, что я сделал для себя и своей семьи».",
-  },
-  {
-    name: "Женщина, 34 года",
-    story:
-      "Алкогольная зависимость. Стыд, вина, ощущение тупика. Разбирались не только с зависимостью, но и с тем, что за ней стояло — какие эмоции она пыталась заглушить.",
-    result: "Два года трезвости. В её телефоне я записан как «Самый Добрый Доктор».",
-  },
-  {
-    name: "Мужчина, 45 лет",
-    story:
-      "7 кодировок. Бесконечное число клиник. После каждого срыва: «Всё, это последний». И снова срыв. Пришёл с чувством, что безнадёжен. Разбирались не с силой воли, а с тем, что стояло за зависимостью: напряжение, неумение сказать «нет», потеря себя.",
-    result: "Два года трезвости. Говорит: «Впервые понимаю, что со мной происходит. И не боюсь будущего».",
-  },
-];
-
+// Секция 3 — Большая идея. Ключевой момент переосмысления.
+// Переводит тревогу из проблемы в сигнал — открывает путь к надежде.
 export default function BigIdea() {
   return (
     <section
-      id="cases"
-      className="relative bg-ink px-6 md:px-16 lg:px-24 py-32 md:py-52 overflow-hidden"
+      id="idea"
+      className="relative bg-deep px-6 md:px-16 lg:px-24 py-28 md:py-44 overflow-hidden"
     >
       <div className="absolute top-10 md:top-16 right-6 md:right-16 flex items-center gap-3">
         <span className="block w-10 h-px bg-paper/15" />
         <span className="font-sans text-[10px] font-light tracking-[0.4em] uppercase text-paper/35">
-          03 / Истории
+          03 / Большая идея
         </span>
       </div>
 
-      <div className="max-w-[1240px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <AnimateIn>
-          <p className="eyebrow mb-16 md:mb-24">Истории</p>
+          <p className="eyebrow mb-12 md:mb-16">Если коротко</p>
         </AnimateIn>
 
-        <div className="divide-y divide-paper/[0.08]">
-          {cases.map((c, i) => (
-            <AnimateIn key={c.name} delay={i * 0.1} className="py-12 md:py-16 first:pt-0">
-              <div className="grid grid-cols-12 gap-6 md:gap-16">
-                <div className="col-span-12 md:col-span-3">
-                  <p className="font-serif font-light text-[clamp(1.1rem,2vw,1.4rem)] text-gold leading-snug">
-                    {c.name}
-                  </p>
-                </div>
-                <div className="col-span-12 md:col-span-9 space-y-5">
-                  <p className="font-sans text-[14px] md:text-[16px] font-light leading-[1.9] text-paper/65">
-                    {c.story}
-                  </p>
-                  <p className="font-serif italic font-light text-[clamp(1.1rem,2vw,1.4rem)] leading-[1.45] tracking-[-0.01em] text-paper/90">
-                    {c.result}
-                  </p>
-                </div>
-              </div>
-            </AnimateIn>
-          ))}
+        <div className="space-y-10 md:space-y-14">
+          <AnimateIn>
+            <p className="font-serif font-light text-[clamp(2rem,5.5vw,4.6rem)] leading-[1.12] tracking-[-0.03em] text-paper">
+              Тревога, зависимость, апатия —<br className="hidden md:block" />{" "}
+              не&nbsp;приговор.
+            </p>
+          </AnimateIn>
+
+          <AnimateIn delay={0.08}>
+            <p className="font-serif font-light text-[clamp(2rem,5.5vw,4.6rem)] leading-[1.12] tracking-[-0.03em] text-paper/50">
+              Это{" "}
+              <span className="italic text-gold text-paper/100">сигнал</span>:
+              ты потерял связь с&nbsp;собой.
+            </p>
+          </AnimateIn>
+
+          <AnimateIn delay={0.16}>
+            <div className="flex items-start gap-6 pt-6 md:pt-10 border-t border-paper/[0.08]">
+              <span className="mt-1 hidden md:block h-px w-14 shrink-0 bg-gold/40 mt-4" />
+              <p className="font-sans text-[15px] md:text-[18px] font-light leading-[1.9] text-paper/60 max-w-[600px]">
+                Я не&nbsp;латаю симптом. Мы&nbsp;идём к&nbsp;корню — и&nbsp;ты
+                снова становишься автором своей жизни,
+                а&nbsp;не&nbsp;пассажиром.
+              </p>
+            </div>
+          </AnimateIn>
         </div>
       </div>
     </section>

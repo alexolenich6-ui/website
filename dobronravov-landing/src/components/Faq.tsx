@@ -44,7 +44,7 @@ export default function Faq() {
       <div className="absolute top-10 md:top-16 right-6 md:right-16 flex items-center gap-3">
         <span className="block w-10 h-px bg-paper/15" />
         <span className="font-sans text-[10px] font-light tracking-[0.4em] uppercase text-paper/35">
-          08 / Вопросы
+          09 / Вопросы
         </span>
       </div>
 

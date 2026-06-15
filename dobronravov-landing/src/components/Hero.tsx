@@ -40,10 +40,6 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] w-full overflow-hidden bg-ink"
     >
-      {/* Atmospheric light — the lighthouse beam, drawn from the top.
-          ASSET (optional, §6 фото A — 9ca52427 ч/б портрет): можно подложить
-          фоном поверх этого слоя как <Image fill className="object-cover opacity-40" />.
-          См. ASSETS.md → public/portrait/hero.jpg */}
       <motion.div
         style={{ y: glowY }}
         className="pointer-events-none absolute inset-0"
@@ -53,7 +49,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink/20 to-ink" />
       </motion.div>
 
-      {/* Vertical index — left edge */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -70,7 +65,7 @@ export default function Hero() {
         style={{ y: textY, opacity: textOpacity }}
         className="relative z-10 min-h-[100svh] flex flex-col justify-between max-w-[1680px] mx-auto px-6 md:px-16 lg:px-24 pt-32 md:pt-40 pb-14 md:pb-24"
       >
-        {/* Eyebrow — big idea */}
+        {/* Eyebrow */}
         <div className="overflow-hidden">
           <motion.p
             variants={reveal}
@@ -83,42 +78,47 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* Massive headline */}
-        <h1 className="-mx-1 font-serif text-[clamp(2.4rem,8vw,8rem)] font-light leading-[1.0] tracking-[-0.03em]">
-          <span className="block overflow-hidden pb-1">
-            <motion.span
+        {/* Headline block */}
+        <div className="-mx-1 space-y-4 md:space-y-6">
+          {/* Problem statement — smaller, sets up the promise */}
+          <div className="overflow-hidden">
+            <motion.p
               variants={reveal}
               initial="hidden"
               animate="visible"
               custom={1}
-              className="block text-paper"
+              className="font-serif font-light text-[clamp(1.1rem,2.8vw,2.2rem)] leading-[1.25] tracking-[-0.01em] text-paper/50 italic"
             >
-              Когда тревога,
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden pb-1">
-            <motion.span
-              variants={reveal}
-              initial="hidden"
-              animate="visible"
-              custom={2}
-              className="block italic text-gold pl-[0.05em]"
-            >
-              зависимость
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden pb-1">
-            <motion.span
-              variants={reveal}
-              initial="hidden"
-              animate="visible"
-              custom={3}
-              className="block text-paper"
-            >
-              или пустота мешают жить.
-            </motion.span>
-          </span>
-        </h1>
+              Когда тревога, зависимость или пустота мешают жить —
+            </motion.p>
+          </div>
+
+          {/* Big Idea — the promise */}
+          <h1 className="font-serif font-light leading-[0.94] tracking-[-0.04em]">
+            <span className="block overflow-hidden pb-1">
+              <motion.span
+                variants={reveal}
+                initial="hidden"
+                animate="visible"
+                custom={2}
+                className="block text-[clamp(3.8rem,13vw,13rem)] text-paper"
+              >
+                Вернуться
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden pb-1">
+              <motion.span
+                variants={reveal}
+                initial="hidden"
+                animate="visible"
+                custom={3}
+                className="block text-[clamp(3.8rem,13vw,13rem)] italic text-gold pl-[0.05em]"
+              >
+                к&nbsp;себе.
+              </motion.span>
+            </span>
+          </h1>
+        </div>
 
         {/* Bottom row */}
         <motion.div
@@ -128,7 +128,7 @@ export default function Hero() {
           custom={0}
           className="pt-8 md:pt-10 border-t border-paper/10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end"
         >
-          <p className="md:col-span-6 font-sans text-[13px] md:text-[15px] font-light leading-[1.85] text-paper/70 max-w-[520px]">
+          <p className="md:col-span-6 font-sans text-[13px] md:text-[15px] font-light leading-[1.85] text-paper/65 max-w-[520px]">
             Вы держитесь, терпите, заглушаете — а легче не&nbsp;становится
             или становится на&nbsp;время. Я&nbsp;помогаю разобраться,
             что с&nbsp;вами происходит, и&nbsp;вернуть себе опору внутри,
@@ -145,7 +145,6 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Subtle scroll cue */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
