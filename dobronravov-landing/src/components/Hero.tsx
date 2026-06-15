@@ -57,23 +57,26 @@ export default function Hero() {
       <div className="order-2 lg:order-1 flex flex-col gap-6 bg-ink px-6 md:px-12 lg:px-16 xl:px-24 pt-8 lg:pt-40 pb-12 lg:pb-16 lg:justify-between">
 
         {/* Eyebrow */}
-        <motion.p
-          variants={reveal}
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          className="font-sans text-[10px] font-light tracking-[0.45em] uppercase text-gold/70"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-col gap-1"
         >
-          Давид Добронравов · Клинический психолог
-        </motion.p>
+          <p className="font-sans text-[10px] font-light tracking-[0.3em] uppercase text-gold/70">
+            Давид Добронравов
+          </p>
+          <p className="font-sans text-[10px] font-light tracking-[0.3em] uppercase text-paper/40">
+            Клинический психолог
+          </p>
+        </motion.div>
 
         {/* Headline */}
         <div className="space-y-2">
           <motion.p
-            variants={reveal}
-            initial="hidden"
-            animate="visible"
-            custom={1}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif italic font-light text-[1.1rem] lg:text-[1.3rem] leading-[1.4] text-paper/55"
           >
             Когда тревога, зависимость или пустота мешают жить —
