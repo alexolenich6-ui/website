@@ -81,8 +81,8 @@ export default function Hero() {
 
           <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={0}
             className="font-sans text-[13px] font-light leading-[1.8] text-paper/55 max-w-[360px]">
-            Когда тревога, зависимость или пустота мешают жить —
-            я&nbsp;помогаю найти опору внутри и&nbsp;вернуться к&nbsp;своей жизни.
+            Вы держитесь, терпите, заглушаете — а легче не&nbsp;становится.
+            Я&nbsp;помогаю найти опору внутри и&nbsp;вернуться к&nbsp;своей жизни.
           </motion.p>
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={1}
