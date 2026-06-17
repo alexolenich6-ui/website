@@ -67,49 +67,33 @@ export default function Hero() {
             Давид Добронравов
           </p>
           <p className="font-sans text-[10px] font-light tracking-[0.3em] uppercase text-paper/40">
-            Клинический психолог
+            Клинический психолог · с опытом священнического служения
           </p>
         </motion.div>
 
         {/* Headline */}
-        <div className="space-y-2">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif italic font-light text-[1.1rem] lg:text-[1.3rem] leading-[1.4] text-paper/55"
-          >
-            Когда тревога, зависимость или пустота мешают жить —
-          </motion.p>
-
-          <h1 className="font-serif font-light leading-[0.92] tracking-[-0.04em]">
-            <span className="block overflow-hidden pb-1">
-              <motion.span
-                variants={reveal} initial="hidden" animate="visible" custom={2}
-                className="block text-[clamp(3.2rem,10vw,8rem)] text-paper"
-              >
-                Вернуться
-              </motion.span>
-            </span>
-            <span className="block overflow-hidden">
-              <motion.span
-                variants={reveal} initial="hidden" animate="visible" custom={3}
-                className="block text-[clamp(3.2rem,10vw,8rem)] italic text-gold"
-              >
-                к&nbsp;себе.
-              </motion.span>
-            </span>
-          </h1>
-        </div>
+        <h1 className="max-w-[16ch] font-serif font-light leading-[1.05] tracking-[-0.025em] text-[clamp(1.9rem,4.6vw,3.6rem)] text-paper">
+          <span className="block overflow-hidden pb-1">
+            <motion.span
+              variants={reveal} initial="hidden" animate="visible" custom={2}
+              className="block"
+            >
+              Когда тревога, зависимость или пустота мешают{" "}
+              <span className="italic text-gold">жить</span>.
+            </motion.span>
+          </span>
+        </h1>
 
         {/* Bottom content */}
         <motion.div
           variants={fadeUp} initial="hidden" animate="visible" custom={0}
           className="flex flex-col gap-5 pt-6 border-t border-paper/10"
         >
-          <p className="font-sans text-[13px] lg:text-[14px] font-light leading-[1.85] text-paper/55 max-w-[420px]">
-            Вы держитесь, терпите, заглушаете — а легче не&nbsp;становится.
-            Я&nbsp;помогаю найти опору внутри и&nbsp;вернуться к&nbsp;своей жизни.
+          <p className="font-sans text-[13px] lg:text-[14px] font-light leading-[1.85] text-paper/55 max-w-[480px]">
+            Вы держитесь, терпите, заглушаете — а&nbsp;легче не&nbsp;становится
+            или становится на&nbsp;время. Я&nbsp;помогаю разобраться, что
+            с&nbsp;вами происходит, и&nbsp;вернуть себе опору внутри — чтобы вы
+            снова понимали, чего хотите, и&nbsp;жили свою жизнь.
           </p>
           <CtaButton />
           <p className="font-sans text-[9px] lg:text-[10px] font-light tracking-[0.3em] uppercase text-paper/30 leading-[2]">
