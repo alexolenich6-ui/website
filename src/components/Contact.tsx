@@ -20,7 +20,7 @@ function maskPhone(raw: string): string {
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const onPhone = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,14 +28,24 @@ export default function Contact() {
     setForm((f) => ({ ...f, phone: maskPhone(e.target.value) }));
   };
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Заявка с сайта olenich-interior");
-    const body = encodeURIComponent(
-      `Имя: ${form.name}\nТелефон: ${form.phone}\nО проекте: ${form.message}`
-    );
-    window.location.href = `mailto:${CONTACTS.email}?subject=${subject}&body=${body}`;
-    setStatus("sent");
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -182,9 +192,18 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="group mt-12 w-full inline-flex items-center justify-center gap-4 bg-espresso text-cream py-5 md:py-6 font-sans text-[10px] font-light tracking-[0.45em] uppercase hover:bg-espresso/85 transition-colors duration-500"
+              disabled={status === "sending" || status === "sent"}
+              className="group mt-12 w-full inline-flex items-center justify-center gap-4 bg-espresso text-cream py-5 md:py-6 font-sans text-[10px] font-light tracking-[0.45em] uppercase hover:bg-espresso/85 transition-colors duration-500 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              <span>{status === "sent" ? "Отправлено" : "Отправить"}</span>
+              <span>
+                {status === "sending"
+                  ? "Отправляю…"
+                  : status === "sent"
+                  ? "Заявка принята"
+                  : status === "error"
+                  ? "Ошибка — попробуйте ещё"
+                  : "Отправить"}
+              </span>
               <span className="block h-px w-6 bg-cream/60 group-hover:w-10 transition-all duration-700" />
             </button>
 
