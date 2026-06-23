@@ -42,9 +42,8 @@ export default function BigIdea() {
             <div className="flex items-start gap-6 pt-6 md:pt-10 border-t border-paper/[0.08]">
               <span className="mt-1 hidden md:block h-px w-14 shrink-0 bg-gold/40 mt-4" />
               <p className="font-sans text-[15px] md:text-[18px] font-light leading-[1.9] text-paper/60 max-w-[600px]">
-                Я не&nbsp;латаю симптом. Мы&nbsp;идём к&nbsp;корню — и&nbsp;ты
-                снова становишься автором своей жизни,
-                а&nbsp;не&nbsp;пассажиром.
+                Мы&nbsp;идём к&nbsp;корню — и&nbsp;ты снова становишься
+                автором своей жизни, а&nbsp;не&nbsp;живёшь на&nbsp;автомате.
               </p>
             </div>
           </AnimateIn>

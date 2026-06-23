@@ -28,7 +28,7 @@ export default function Audience() {
           </div>
         </AnimateIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 mb-16 md:mb-20">
           <AnimateIn>
             <div className="border border-paper/[0.1] rounded-sm p-8 md:p-10 h-full bg-paper/[0.03]">
               <div className="flex items-center gap-3 mb-7">
@@ -45,24 +45,6 @@ export default function Audience() {
                 Или если вы дошли до точки, где дальше так нельзя —
                 и&nbsp;готовы не&nbsp;на&nbsp;чудо, а&nbsp;на&nbsp;настоящую
                 работу над собой.
-              </p>
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.1}>
-            <div className="border border-paper/[0.06] rounded-sm p-8 md:p-10 h-full">
-              <div className="flex items-center gap-3 mb-7">
-                <span className="font-serif text-[1.4rem] text-paper/25 leading-none">—</span>
-                <p className="eyebrow !text-paper/35">Возможно, я не ваш специалист</p>
-              </div>
-              <p className="font-sans text-[14px] md:text-[15px] font-light leading-[1.9] text-paper/40">
-                Если вы ищете быстрый совет или «волшебную таблетку»
-                за&nbsp;одну встречу. Я&nbsp;работаю в&nbsp;длительной
-                терапии — симптом уходит через корень, а&nbsp;не
-                по&nbsp;поверхности.
-              </p>
-              <p className="mt-6 font-sans text-[14px] font-light leading-[1.9] text-paper/40">
-                Это честно — так мы&nbsp;оба сэкономим время.
               </p>
             </div>
           </AnimateIn>

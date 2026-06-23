@@ -33,8 +33,7 @@ export default function About() {
           <div className="grid grid-cols-12 gap-4 mb-16 md:mb-28">
             <p className="eyebrow col-span-12 md:col-span-2">Обо мне</p>
             <h2 className="col-span-12 md:col-span-10 md:col-start-3 font-serif font-light text-[clamp(2.2rem,6vw,5.25rem)] leading-[0.98] tracking-[-0.03em] text-paper">
-              Я пришёл в психологию{" "}
-              <span className="italic text-gold">не сразу</span>.
+              Мой путь в&nbsp;<span className="italic text-gold">психологию</span>
             </h2>
           </div>
         </AnimateIn>
@@ -113,11 +112,11 @@ export default function About() {
             <AnimateIn>
               <p className="eyebrow mb-8">Откуда я это знаю</p>
               <p className="font-serif font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.3] tracking-[-0.02em] text-paper/85 max-w-[560px]">
-                Четырнадцать лет рядом с&nbsp;людьми в&nbsp;горе, утрате,
+                Восемнадцать лет рядом с&nbsp;людьми в&nbsp;горе, утрате,
                 зависимости. Это не&nbsp;строчка в&nbsp;резюме —
                 это <span className="italic text-gold">объёмное зрение</span>,
-                которое не&nbsp;получишь за&nbsp;партой. Я&nbsp;видел тёмное
-                вблизи и&nbsp;не&nbsp;разучился быть рядом.
+                которое помогает увидеть проблему в&nbsp;целом
+                и&nbsp;принять правильное решение.
               </p>
             </AnimateIn>
           </div>
